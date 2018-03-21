@@ -1,2 +1,2 @@
 # bibnama
-extract names from Indonesian bible
+extract names from **Indonesian bible**
