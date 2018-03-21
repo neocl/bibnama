@@ -54,4 +54,4 @@ with open("name_freq.csv", "w") as outfile:
     for word, freq in tc.most_common():
         if word in names:
             writer.writerow((word, freq))
-print("Done")
+print("Donezo")
