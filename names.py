@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import csv
 import nltk
 import string
@@ -49,9 +52,12 @@ name_list = list(sorted(names))
 
 
 # write to file
-with open("name_freq.csv", "w") as outfile:
+name_file = "name_freq.csv"
+with open(name_file, "w") as outfile:
     writer = csv.writer(outfile, dialect='excel-tab', quoting=csv.QUOTE_MINIMAL)
     for word, freq in tc.most_common():
         if word in names:
             writer.writerow((word, freq))
-print("Donezo")
+
+print("Donezo! Namelist has been written to {}".format(name_file))
+
