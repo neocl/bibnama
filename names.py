@@ -49,9 +49,10 @@ name_list = list(sorted(names))
 
 
 # write to file
-with open("name_freq.csv", "w") as outfile:
+namefile = "name_freq.csv"
+with open(namefile, "w") as outfile:
     writer = csv.writer(outfile, dialect='excel-tab', quoting=csv.QUOTE_MINIMAL)
     for word, freq in tc.most_common():
         if word in names:
             writer.writerow((word, freq))
-print("Done")
+print("Name list has been written to {}".format(namefile))
